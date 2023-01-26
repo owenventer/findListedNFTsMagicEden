@@ -9,7 +9,7 @@ function App() {
   const handleChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setCID(event.target.value);
   };
-  const url = `https://api.helius.xyz/v1/active-listings?api-key=848e6147-3aae-4b26-af06-b1d4174f3cf9`;
+  const url = `https://api.helius.xyz/v1/active-listings?api-key=${process.env.REACT_APP_HELIUS_API}`;
   const [meData,setmeData]=useState([]);
   const getActiveListings = async () => {
     console.log(cID);
