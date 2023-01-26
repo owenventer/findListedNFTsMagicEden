@@ -28,7 +28,7 @@ function App() {
   
       return(
           <div className="middle" >
-            <h1 className="middle">Get listend NFTs on Magic Eden</h1>
+            <h1 className="middle">Get listed NFTs on Magic Eden!</h1>
               
               <div className="middle">
                 <h3>Enter Collection ID:</h3>
@@ -41,6 +41,7 @@ function App() {
             <th>Name</th>
             <th>Mint</th>
             <th>Owner</th>
+            <th>Price</th>
             
           </tr>
           {meData.map((item) => (
@@ -48,6 +49,7 @@ function App() {
               <td>{item['name']}</td>
               <td>{item['mint']}</td>
               <td>{item['activeListings']['0']['seller']}</td>
+              <td>{item['activeListings']['0']['amount']/1000000000 +" SOL"}</td>
             </tr>
           ))}
         </tbody>
